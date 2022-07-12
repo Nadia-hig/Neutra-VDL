@@ -1,0 +1,61 @@
+
+$c1: #130901;
+
+.header{
+   padding: 25px 0px;
+   position: absolute;
+   width: 100%;
+   font-size: 16px;
+   a{
+      color: $c1;
+   }
+   &__logo{
+      span{
+         border-bottom: 1px solid $c1;
+      }
+   }
+   &__list{
+      grid-column-start: span 3;
+      display: flex;
+   }
+   &__link{
+      margin-right: 6px;
+      position: relative;
+      ::after{
+         content: '';
+         background-color: $c1;
+         position: absolute;
+         width: 0%;
+         height: 1px;
+         left: 0%;
+         bottom: 0%;
+         transition: all 500ms ease;
+      }
+      :hover::after{
+         left: 0%;
+         width: 100%;
+      }
+   }
+   &__tickets{
+      grid-column: 10/12;
+      font-weight: 200;
+      &_arrow{
+         display: inline-block;
+         margin-bottom: 4px;
+         height: 10px;
+         width: 10px;
+         border-top: 1px solid $c1;
+         border-right: 1px solid $c1;
+         visibility: hidden;
+      }
+   }
+   .burger{
+      margin: 0px 0px 0px auto;
+      &__line{
+         height: 1px;
+         width: 35px;
+         background-color: $c1;
+         margin: 7px 0px;
+      }
+   }
+} 

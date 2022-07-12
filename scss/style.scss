@@ -1,0 +1,184 @@
+@import "_nullstyle";
+@import "_header";
+@import "_footer";
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200;400;600&display=swap');
+
+$c1: #130901;
+$c2: #F7F4EE;
+$c3: #BDBBB9;
+//$c3: rgba(19, 9, 1, 0.2);
+
+body{
+   font-family: 'Libre Franklin', sans-serif;
+   font-weight: 600;
+   color: $c1;
+}
+
+.wrapper{
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+}
+
+.container-c12{
+   margin: 0px 50px;
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   column-gap: 20px;
+}
+.container-c4{
+   margin: 0px 50px;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   column-gap: 20px;
+}
+
+.title{
+      font-size: 64px;
+      font-weight: 600;
+      letter-spacing: -4px;
+}
+.text{
+   font-size: 17px;
+   line-height: 18px;
+   &__small{
+      font-size: 14px;
+      line-height: 18px;
+      a{
+         border-bottom: 1px solid $c1;
+      }
+      span{
+         font-weight: 200;
+      }
+      .with-line{
+         display: block;
+         margin-bottom: 2px;
+         border-bottom: 1px solid $c1;
+      }
+   }
+   &__big{
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: -0.5px;
+      span{
+         border-bottom: 3px solid $c1;
+      }
+      .red-string{
+         text-indent: 100px;
+      }
+   }
+}
+a{
+   color: $c1;
+}
+
+.main{
+   flex: 1 1 auto;
+   background-color: $c2;
+
+   .neutra{
+      margin-top: 18%;
+      &__line{
+         grid-column-start: span 4;
+         background-color: $c1;
+         height: 1px;
+         width: 100%;
+      }
+   }
+
+   .about{
+      margin-top: 45px;
+      &__contact{
+         p{
+            margin-bottom: 10px;
+            :last-child{
+               margin-bottom: 0;
+            }
+         }
+      }
+      &__info{
+         grid-column: 3/4;
+         padding-right: 35px;
+         p{
+            margin-bottom: 18px;
+            :last-child{
+               margin-bottom: 0;
+            }
+         }
+      }
+   }
+
+   .photo{
+      &__img{
+         grid-column: 2/5;
+         position: relative;
+         min-width: 100%;
+         padding-bottom: 90%;
+         img{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+         }
+      }
+      &__text{
+         grid-column: 4/5;
+         :last-child{
+            padding-bottom: 80px;
+         }
+      }
+   }
+
+   .history{
+      &__contact{
+         :first-child{
+            margin-bottom: 30px;
+         }
+         :nth-child(2){
+            margin-bottom: 30px;
+         }
+      }
+      &__text{
+         grid-column: 3/5;
+         p{
+            margin-bottom: 30px;
+            :last-child{
+               margin-bottom: 0px;
+            }
+         }
+      }
+   } 
+
+   .house{
+      padding-bottom: 100px;
+      &__menu{
+         .with-line-g{
+            display: block;
+            margin-bottom: 2px;
+            color: $c3;
+            border-bottom: 1px solid $c3;
+            :hover{
+               color: $c1;
+               border-bottom: 1px solid $c1;
+            }
+         }
+      }
+      &__img{
+         grid-column: 2/5;
+         position: relative;
+         max-width: 80%;
+         padding-bottom: 80%;
+         img{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            object-fit: fill;
+         }
+      }
+   }
+}
