@@ -3,9 +3,10 @@ $c1: #130901;
 
 .header{
    padding: 25px 0px;
-   position: absolute;
+   position: fixed;
    width: 100%;
    font-size: 16px;
+   z-index: 200;
    a{
       color: $c1;
    }
@@ -46,8 +47,12 @@ $c1: #130901;
          width: 10px;
          border-top: 1px solid $c1;
          border-right: 1px solid $c1;
-         visibility: hidden;
+         opacity: 0;
       }
+   }
+   .tickets:hover ~ .header__tickets_arrow{
+      opacity: 1;
+      transition: opacity 0s ease 0.3s;
    }
    .burger{
       margin: 0px 0px 0px auto;
@@ -76,6 +81,9 @@ $c1: #130901;
 @media (max-width:750px){
    .header{
       padding: 20px 0px;
-      font-size: 20px;
+      font-size: 18px;
+      &__tickets{
+         grid-column: 3/4;
+      }
    }
 }

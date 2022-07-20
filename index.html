@@ -4,8 +4,8 @@
 <head>
    <meta charset="UTF-8">
    <meta name="format-detection" content="telephone=no">
-   <meta name=" viewport" content="width=decice-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-   <link rel="stylesheet" href="css/style.css" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel=" stylesheet" href="css/style.css" />
    <title>Neutra VDL</title>
 </head>
 
@@ -29,7 +29,11 @@
                </a>
             </ul>
             <div class="header__tickets">
-               <a href="#" class="header__link"><span>Book Tickets</span></a>
+               <a href="#" class="header__link tickets"><span>Book Tickets</span></a>
+               <div class="header__tickets_arrow"></div>
+            </div>
+            <div class="header__tickets tickets__small">
+               <a href="#" class="header__link"><span>Tickets</span></a>
                <div class="header__tickets_arrow"></div>
             </div>
             <div class="burger">
@@ -125,26 +129,26 @@
             <div class="container-c4">
                <ul class="house__menu text__small">
                   <li class="with-line-g">
-                     <p>01 Main House</p>
+                     <p id="houseBtn01">01 Main House</p>
                   </li>
                   <li class="with-line-g">
-                     <p>02 Level 1</p>
+                     <p id="houseBtn02">02 Level 1</p>
                   </li>
                   <li class="with-line-g">
-                     <p>03 Level 2</p>
+                     <p id="houseBtn03">03 Level 2</p>
                   </li>
                   <li class="with-line-g">
-                     <p>04 Level 3, Penthouse</p>
+                     <p id="houseBtn04">04 Level 3, Penthouse</p>
                   </li>
                   <li class="with-line-g">
-                     <p>05 Garden House</p>
+                     <p id="houseBtn05">05 Garden House</p>
                   </li>
                   <li class="with-line-g">
-                     <p>06 Gardens</p>
+                     <p id="houseBtn06">06 Gardens</p>
                   </li>
                </ul>
                <div class="house__img">
-                  <img src="img/main/house/01.jpg">
+                  <img id="houseImg" src="img/main/house/01.jpg">
                </div>
             </div>
          </section>

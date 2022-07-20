@@ -30,11 +30,9 @@ $c2: #F7F4EE;
 @media (max-width:750px){
    .footer{
       padding: 20px 0px 0px; 
-      :last-child{
-         grid-column: 2/3;
-      }
+
       &__contact{
-         grid-column-start: span 1;
+         grid-column-start: span 2;
          padding-bottom: 30px;
       }
       &__container{
