@@ -216,30 +216,40 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px 0px 0px;
   }
   .footer__contact {
-    -ms-grid-column: span 2;
-        grid-column-start: span 2;
     padding-bottom: 30px;
   }
   .footer__container :nth-child(1) {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
   }
   .footer__container :nth-child(2) {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3/5;
   }
   .footer__container :nth-child(3) {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
   }
   .footer__container :nth-child(4) {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
     visibility: hidden;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3/5;
   }
 }
 
@@ -358,6 +368,7 @@ body {
 
 a {
   color: #130901;
+  cursor: pointer;
 }
 
 @media (max-width: 1100px) {
@@ -489,12 +500,39 @@ a {
 }
 
 .main .house {
-  padding: 50px 0px 100px;
+  padding-bottom: 100px;
+}
+
+.main .house__menu .with-line-g {
+  display: block;
+  margin-bottom: 2px;
+  color: #BDBBB9;
+  border-bottom: 1px solid #BDBBB9;
+}
+
+.main .house__menu .with-line-g :hover {
+  color: #130901;
+  margin-bottom: -1px;
+  border-bottom: 1px solid #130901;
 }
 
 .main .house__img {
   -ms-grid-column: 2;
-      grid-column-start: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2/5;
+  position: relative;
+  max-width: 80%;
+  padding-bottom: 80%;
+}
+
+.main .house__img img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 @media (max-width: 1100px) {
@@ -547,34 +585,16 @@ a {
         grid-column-start: 2;
   }
   .main .house {
-    padding-bottom: 100px;
+    padding: 50px 0px 100px;
   }
-  .main .house__menu .with-line-g {
-    display: block;
-    margin-bottom: 2px;
-    color: #BDBBB9;
-    border-bottom: 1px solid #BDBBB9;
-  }
-  .main .house__menu .with-line-g :hover {
-    color: #130901;
-    border-bottom: 1px solid #130901;
+  .main .house__menu {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
   }
   .main .house__img {
     -ms-grid-column: 2;
-    -ms-grid-column-span: 3;
-    grid-column: 2/5;
-    position: relative;
-    max-width: 80%;
-    padding-bottom: 80%;
-  }
-  .main .house__img img {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    -o-object-fit: fill;
-       object-fit: fill;
+        grid-column-start: 2;
   }
 }
 

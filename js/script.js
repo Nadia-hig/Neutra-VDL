@@ -1,9 +1,9 @@
 
+"use strict"
+
 
 const SCREEN_1100 = window.matchMedia("(max-width:1100px)"),
    SCREEN_750 = window.matchMedia("(max-width:750px)");
-
-
 
 const headerList = document.querySelector('.header__list'),
    headerLogo = document.querySelector('.header__logo'),
@@ -55,8 +55,9 @@ function changes750(SCREEN_750) {
    }
 }
 
-const houseImg = document.getElementById("houseImg"),
-   withLineG = document.getElementById("with-line-g"),
+const houseMenu = document.querySelector('.house__menu'),
+   withLineG = document.querySelector('.with-line-g'),
+   houseImg = document.getElementById("houseImg"),
    houseBtn01 = document.getElementById("houseBtn01"),
    houseBtn02 = document.getElementById("houseBtn02"),
    houseBtn03 = document.getElementById("houseBtn03"),
@@ -83,9 +84,6 @@ houseBtn05.addEventListener("click", () => {
 houseBtn06.addEventListener("click", () => {
    houseImg.src = 'img/main/house/06.jpg';
 });
-
-
-
 
 
 

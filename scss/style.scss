@@ -7,6 +7,7 @@
 $c1: #130901;
 $c2: #F7F4EE;
 $c3: #BDBBB9;
+$c4: #1E1E1D;
 //$c3: rgba(19, 9, 1, 0.2);
 
 body{
@@ -95,6 +96,7 @@ body{
 }
 a{
    color: $c1;
+   cursor: pointer;
 }
 @media (max-width:1100px){
    .text{
@@ -212,11 +214,36 @@ a{
    } 
 
    .house{
-      padding: 50px 0px 100px;
+      padding-bottom: 100px;
+      &__menu{
+         .with-line-g{
+            display: block;
+            margin-bottom: 2px;
+            color: $c3;
+            border-bottom: 1px solid $c3;
+            :hover{
+               color: $c1;
+               margin-bottom: -1px;
+               border-bottom: 1px solid $c1;
+            }
+         }
+      }
       &__img{
-         grid-column-start: 2;
+         grid-column: 2/5;
+         position: relative;
+         max-width: 80%;
+         padding-bottom: 80%;
+         img{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            object-fit: fill;
+         }
       }
    }
+
 }
 @media (max-width:1100px){
    .main{
@@ -270,32 +297,12 @@ a{
       } 
    
       .house{
-         padding-bottom: 100px;
+         padding: 50px 0px 100px;
          &__menu{
-            .with-line-g{
-               display: block;
-               margin-bottom: 2px;
-               color: $c3;
-               border-bottom: 1px solid $c3;
-               :hover{
-                  color: $c1;
-                  border-bottom: 1px solid $c1;
-               }
-            }
+            grid-column: 1/2;
          }
          &__img{
-            grid-column: 2/5;
-            position: relative;
-            max-width: 80%;
-            padding-bottom: 80%;
-            img{
-               position: absolute;
-               height: 100%;
-               width: 100%;
-               top: 0;
-               left: 0;
-               object-fit: fill;
-            }
+            grid-column-start: 2;
          }
       }
    }
